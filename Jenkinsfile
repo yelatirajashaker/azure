@@ -19,8 +19,8 @@ node {
     }
   
     stage('deploy') {
-      def resourceGroup = '<resource_group>'
-      def webAppName = '<app_name>'
+      def resourceGroup = 'jenkins32_group'
+      def webAppName = 'jenkins32'
       // login Azure
       withCredentials([usernamePassword(credentialsId: '9e471060-f959-42c8-9c52-47dd7157116e', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
        sh '''
